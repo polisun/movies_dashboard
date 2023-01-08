@@ -1,38 +1,9 @@
 {
-  "genres": [
-    "Comedy",
-    "Fantasy",
-    "Crime",
-    "Drama",
-    "Music",
-    "Adventure",
-    "History",
-    "Thriller",
-    "Animation",
-    "Family",
-    "Mystery",
-    "Biography",
-    "Action",
-    "Film-Noir",
-    "Romance",
-    "Sci-Fi",
-    "War",
-    "Western",
-    "Horror",
-    "Musical",
-    "Sport"
-  ],
-  "favorites": [
-    {
-      "id": 1,
-      "title": "test"
-    }
-  ],
   "movies": [
     {
       "id": 1,
       "title": "Beetlejuice",
-      "year": "1988",
+      "year": "1990",
       "runtime": "92",
       "genres": [
         "Comedy",
@@ -46,12 +17,11 @@
     {
       "id": 2,
       "title": "The Cotton Club",
-      "year": "1984",
-      "runtime": "127",
+      "year": "1985",
+      "runtime": "128",
       "genres": [
         "Crime",
-        "Drama",
-        "Music"
+        "Drama"
       ],
       "director": "Francis Ford Coppola",
       "actors": "Richard Gere, Gregory Hines, Diane Lane, Lonette McKee",
@@ -2154,6 +2124,34 @@
       "actors": "Ryan Gosling, Rudy Eisenzopf, Casey Groves, Charlie Talbert",
       "plot": "Four denizens in the world of high-finance predict the credit and housing bubble collapse of the mid-2000s, and decide to take on the big banks for their greed and lack of foresight.",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+    },
+    {
+      "title": "Lupin",
+      "director": "George Kay",
+      "year": "2021",
+      "runtime": "45",
+      "plot": "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+      "actors": "Omar Sy, Ludivine Sagnier, Herve Pierre",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "posterUrl": "https://media.kg-portal.ru/tv/l/lupin/posters/lupin_1.jpg",
+      "id": "cdf4644c-92bc-4223-bc06-82c67800d587"
+    },
+    {
+      "title": "122",
+      "director": "122",
+      "year": "122",
+      "runtime": "122",
+      "plot": "124",
+      "actors": "122",
+      "genres": [
+        "122"
+      ],
+      "posterUrl": "122",
+      "id": 148
     }
   ]
 }

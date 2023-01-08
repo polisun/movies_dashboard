@@ -1,13 +1,209 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 64px);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-width: 400px;
+  padding-bottom: 16px;
+}
+
+.movie-list {
+  height: 0;
+  flex-grow: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.movie-item {
+  padding: 12px;
+  margin: 2px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.movie-item:hover {
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.16);
+}
+
+.movie-item-selected {
+  border: 1px solid #000;
+}
+
+.movie-item-title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.movie-item-info {
+  font-size: 14px;
+  color: #6c6c6c;
+  display: flex;
+}
+
+.movie-item-info p {
+  padding-right: 8px;
+  border-right: 2px solid #6c6c6c;
+}
+
+.movie-item-info span {
+  margin-left: 8px;
+}
+
+.sidebar {
+  padding: 16px 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar-footer {
+  margin-top: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-footer svg {
+  margin-right: 8px;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.movie-page {
+  padding: 20px;
+  width: 100%;
+}
+
+.movie-page-top {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-page-container {
+  display: flex;
+  gap: 20px;
+}
+
+.movie-page-info h1 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.movie-page-info h2 {
+  font-size: 16px;
+  color: #6c6c6c;
+  font-weight: 500;
+  margin: 6px 0;
+}
+.movie-page-info h3 {
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.movie-page-param {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.movie-page-param p {
+  min-width: 200px;
+  color: #6c6c6c;
+}
+
+.movie-page-param p:last-child {
+  color: black;
+}
+
+.movie-page-plot {
+  margin-top: 40px;
+  padding-right: 20px;
+}
+
+.movie-page-plot h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.movie-form-main {
+  padding: 20px 20px 0px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-form {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  flex-grow: 1;
+  overflow-y: scroll;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.movie-form h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.movie-form-footer {
+  border-top: 1px solid #ccc;
+  padding: 16px 0;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
 }
