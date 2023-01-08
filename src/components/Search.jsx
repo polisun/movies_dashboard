@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { MoviesContext } from "../context";
+import { MoviesContext } from "../MoviesContext";
 import SearchIcon from "@mui/icons-material/Search";
+
 import {
   FormControl,
   InputLabel,
@@ -26,7 +27,6 @@ const Search = () => {
           }
         />
       </FormControl>
-      <Button variant="outlined">Искать</Button>
     </div>
   );
 };

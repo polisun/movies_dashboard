@@ -1,4 +1,4 @@
-import { MoviesContext } from "../context";
+import { MoviesContext } from "../MoviesContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";

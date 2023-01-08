@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MoviesContext } from "../context";
+import { MoviesContext } from "../MoviesContext";
 import MovieItem from "./MovieItem";
 
 const MoviesList = () => {

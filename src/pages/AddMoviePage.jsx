@@ -1,8 +1,8 @@
-import { useState, useContext } from "react";
+import { useState, useContext,useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, TextField } from "@mui/material";
-import { MoviesContext } from "../context";
-import { v4 as uuid } from "uuid";
+import { MoviesContext } from "../MoviesContext";
+
 
 const defaultState = {
   title: "",
@@ -20,7 +20,7 @@ const AddMoviePage = () => {
 
   const navigate = useNavigate();
 
-  const { setMovies } = useContext(MoviesContext);
+  const { setMovies, movies } = useContext(MoviesContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ const AddMoviePage = () => {
           },
           body: JSON.stringify({
             ...formState,
-            id: uuid(),
+            id: movies.length+1,
           }),
         });
         const data = await res.json();
@@ -47,7 +47,7 @@ const AddMoviePage = () => {
     setFormState(defaultState);
   };
 
-  const handleChange = (e) => {
+  const memoizedHandleChange = useCallback((e) => {
     setFormState({
       ...formState,
       [e.target.name]:
@@ -55,7 +55,7 @@ const AddMoviePage = () => {
           ? e.target.value.split(", ")
           : e.target.value,
     });
-  };
+  },[formState])
 
   return (
     <div className="movie-form-main">
@@ -63,7 +63,7 @@ const AddMoviePage = () => {
         <h1>Создание</h1>
         <TextField
           value={formState.title}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           id="title"
           name="title"
           label="Название фильма"
@@ -71,7 +71,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.posterUrl}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           id="posterUrl"
           name="posterUrl"
           label="Обложка фильма"
@@ -79,7 +79,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.director}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           id="director"
           name="director"
           label="Имя режисера"
@@ -87,7 +87,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.year}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           type="number"
           name="year"
           id="year"
@@ -96,7 +96,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.runtime}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           type="number"
           name="runtime"
           id="runtime"
@@ -105,7 +105,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.genres.join(", ")}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           type="text"
           name="genres"
           id="genres"
@@ -114,7 +114,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.actors}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           type="text"
           name="actors"
           id="actors"
@@ -123,7 +123,7 @@ const AddMoviePage = () => {
         />
         <TextField
           value={formState.plot}
-          onChange={handleChange}
+          onChange={memoizedHandleChange}
           type="text"
           name="plot"
           id="plot"

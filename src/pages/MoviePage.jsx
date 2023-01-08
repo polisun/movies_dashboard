@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react";
 import { Button, Chip } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
-import { MoviesContext } from "../context";
+import { MoviesContext } from "../MoviesContext";
 
 const MoviePage = () => {
   const { currentMovie, setCurrentMovie } = useContext(MoviesContext);
